@@ -1,0 +1,1 @@
+<?php print views_embed_view('ancillaries_local','block_local', $node->field_ancillary_link[LANGUAGE_NONE][0]['tid']); ?>

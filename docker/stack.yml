@@ -1,0 +1,26 @@
+version: '3.1'
+
+services:
+
+  drupal:
+    image: drupal:8-apache
+    ports:
+      - 8080:80
+    volumes:
+      - ../www:/var/www/html:delegated
+    restart: always
+    links:
+          - "db:database"
+
+  db:
+    image: mysql:5
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    restart: always
+
+  adminer:
+      image: adminer
+      restart: always
+      ports:
+        - 8090:8080
