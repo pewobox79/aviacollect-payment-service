@@ -21,54 +21,41 @@
  */
 #}
 
-
 {% import _self as menus %}
-
 {#
   We call a macro which calls itself to render the full tree.
   @see http://twig.sensiolabs.org/doc/tags/macro.html
 #}
 {{ menus.menu_links(items, attributes, 0) }}
-
 {% macro menu_links(items, attributes, menu_level) %}
   {% import _self as menus %}
   {% if items %}
     {% if menu_level == 0 %}
-    <div class="bottom-footer">
-
-      <div class="container">
-
-          <div class="row shrink-auto-md gap-10 gap-40-lg">
-
-              <div class="col-auto">
-                  <div class="col-inner">
-                      <ul class="footer-menu-list-02">
-
+<div class="bottom-footer">
+    <div class="container">
+        <div class="row shrink-auto-md gap-10 gap-40-lg">
+            <div class="col-auto">
+                <div class="col-inner">
+                    <ul class="footer-menu-list-02">
     {% else %}
-      <ul>
+    <ul>
     {% endif %}
     {% for item in items %}
-      <li>
-        {{ link(item.title, item.url) }}
-        {% if item.below %}
-           {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
-        {% endif %}
-      </li>
+        <li>
+            {{ link(item.title, item.url) }}
+            {% if item.below %}
+                {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+            {% endif %}
+        </li>
     {% endfor %}
     {% if menu_level == 0 %}
-    </ul>
-    </nav>
+        </ul></div></div></div></div></div>
     {% else %}
     </ul>
     {% endif %}
   {% endif %}
 {% endmacro %}
-
-              <!-- start Back To Top -->
-                <a id="back-to-top" href="#" class="back-to-top" role="button" title="Return to top" data-toggle="tooltip" data-placement="left"><i class="elegent-icon-arrow_carrot-up"></i></a>
-                <!-- end Back To Top -->
-
-
-
-
-
+<!-- start Back To Top -->
+<a id="back-to-top" href="#" class="back-to-top" role="button" title="Return to top"
+   data-toggle="tooltip" data-placement="left"><i class="elegent-icon-arrow_carrot-up"></i></a>
+<!-- end Back To Top -->
