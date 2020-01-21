@@ -31,33 +31,28 @@
 {{ menus.menu_links(items, attributes, 0) }}
 
 {% macro menu_links(items, attributes, menu_level) %}
-  {% import _self as menus %}
-  {% if items %}
-    {% if menu_level == 0 %}
-    <nav class="main-nav-menu main-menu-nav navbar-arrow">
-      <ul class="main-nav">
-    
-    {% else %}
-      <ul>
-    {% endif %}
-    {% for item in items %}
-      <li>
-        {{ link(item.title, item.url) }}
-        {% if item.below %}
-           {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
-        {% endif %}
-      </li>
-    {% endfor %}
-    {% if menu_level == 0 %}
-    </ul>
-    </nav>
-    {% else %}
-    </ul>
-    {% endif %}
-  {% endif %}
+	{% import _self as menus %}
+	{% if items %}
+		{% if menu_level == 0 %}
+			<nav class="main-nav-menu main-menu-nav navbar-arrow">
+				<ul class="main-nav">
+
+				{% else %}
+					<ul>
+					{% endif %}
+					{% for item in items %}
+						<li>
+							{{ link(item.title, item.url) }}
+							{% if item.below %}
+								{{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+							{% endif %}
+						</li>
+					{% endfor %}
+					{% if menu_level == 0 %}
+					</ul>
+				</nav>
+		{% else %}
+			</ul>
+		{% endif %}
+	{% endif %}
 {% endmacro %}
-
-
-
-
-
