@@ -11,7 +11,7 @@
 # 2. Sub-theme Bartik. This is only recommended if you want to make minor
 # tweaks and understand that Bartik could break your modifications as it
 # changes.
-name: AVIACOLLECT
+name: aviacollect
 type: theme
 base theme: classy
 description: 'A flexible, recolorable theme with many regions and a responsive, mobile-first layout.'
