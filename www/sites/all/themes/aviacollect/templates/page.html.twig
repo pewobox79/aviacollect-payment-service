@@ -1,4 +1,4 @@
-{# /** * @file * aviacollect's theme implementation to display a single page. * * The doctype, html, head and body tags are not in this template. Instead they * can be found in the html.html.twig template normally located in the * core/modules/system
+{# /** * @file * swayfluence's theme implementation to display a single page. * * The doctype, html, head and body tags are not in this template. Instead they * can be found in the html.html.twig template normally located in the * core/modules/system
 directory. * * Available variables: * * General utility variables: * - base_path: The base URL path of the Drupal installation. Will usually be * "/" unless you have installed Drupal in a sub-directory. * - is_front: A flag indicating if the current page
 is the front page. * - logged_in: A flag indicating if the user is registered and signed in. * - is_admin: A flag indicating if the user has permission to access * administration pages. * * Site identity: * - front_page: The URL of the front page. Use
 this instead of base_path when * linking to the front page. This includes the language domain or prefix. * * Page content (in order of occurrence in the default page.html.twig): * - node: Fully loaded node, if there is an automatically-loaded node * associated
@@ -9,133 +9,137 @@ Items for the third featured bottom region. * - page.footer_first: Items for the
 the fourth footer column. * - page.footer_fifth: Items for the fifth footer column. * - page.breadcrumb: Items for the breadcrumb region. * * @see template_preprocess_page() * @see html.html.twig */ #}
 <!-- start Body Inner -->
 <div class="body-inner">
-    <!-- start Header -->
-    <header id="header-waypoint-sticky" class="header-main header-mobile-menu
+  <!-- start Header -->
+  <header id="header-waypoint-sticky" class="header-main header-mobile-menu
         with-absolute-navbar">
-        <div class="header-outer clearfix">
-            <div class="header-inner">
-                <div class="row shrink-auto-lg gap-0 align-items-center">
-                    <div class="col-5 col-shrink">
-                        <div class="col-inner">
-                            <div class="main-logo">
-                                <a href="home-aviacollect.html"><img src="/sites/all/themes/aviacollect/images/image-main/airline-ticket-payment-menu-icon.png" alt="images" /></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-7 col-shrink order-last-lg">
-                        <div class="col-inner">
-                            <ul class="nav-mini-right">
-                                <li>
-                                    <button class="btn btn-toggle collapsed" data-toggle="collapse" data-target="#mobileMenu"></button>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-12 col-auto">
-                        <div class="navbar-wrapper">
-                            <div class="navbar navbar-expand-lg">
-                                <div id="mobileMenu" class="collapse
-                                    navbar-collapse">
-                                    <nav class="main-nav-menu main-menu-nav
-                                        navbar-arrow">
-                                        {{ page.primary_menu }}
-
-                                    </nav>
-                                    <!--/.nav-collapse -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <div class="header-outer clearfix">
+      <div class="header-inner">
+        <div class="row shrink-auto-lg gap-0 align-items-center">
+          <div class="col-5 col-shrink">
+            <div class="col-inner">
+              <div class="main-logo">
+                <a href="home-aviacollect.html"><img
+                    src="/sites/all/themes/aviacollect/images/image-main/airline-ticket-payment-menu-icon.png"
+                    alt="images"/></a>
+              </div>
             </div>
+          </div>
+          <div class="col-7 col-shrink order-last-lg">
+            <div class="col-inner">
+              <ul class="nav-mini-right">
+                <li>
+                  <button class="btn btn-toggle collapsed" data-toggle="collapse" data-target="#mobileMenu"></button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-12 col-auto">
+            <div class="navbar-wrapper">
+              <div class="navbar navbar-expand-lg">
+                <div id="mobileMenu" class="collapse
+                                    navbar-collapse">
+                  <nav class="main-nav-menu main-menu-nav
+                                        navbar-arrow">
+                    {{ page.primary_menu }}
+
+                  </nav>
+                  <!--/.nav-collapse -->
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </header>
-    <!-- start Header -->
-    <!-- start Main Wrapper -->
-    <div class="main-wrapper scrollspy-container">
-        <div class="hero-banner hero-banner-01 overlay-light opacity-2
+      </div>
+    </div>
+  </header>
+  <!-- start Header -->
+  <!-- start Main Wrapper -->
+  <div class="main-wrapper scrollspy-container">
+    <div class="hero-banner hero-banner-01 overlay-light opacity-2
             overlay-relative overlay-gradient gradient-white alt-option-03" style="background-image:url('/sites/all/themes/aviacollect/images/image-main/aviacollect-airline-ticket-payment.png');
             background-position: top center;">
-            <div class="overlay-holder bottom"></div>
-            <div class="hero-inner">
-                <div class="container">
-                    <h1>form für ticket buchung</h1>
-                </div>
-            </div>
+      <div class="overlay-holder bottom"></div>
+      <div class="hero-inner">
+
+<!--payment form-->
+        <div class="container">
+          {{ page.highlighted }}
         </div>
-        <section class="pb-0">
-            <div class="container">
-                <div id="after-payment" class="clear mb-100"></div>
-                <div class="row cols-1 cols-sm-2 cols-lg-4 gap-2 mb-20">
-                    <!--Frage: müssen die colums formatiert werden?-->
 
-                        {{ page.content }}
 
-                </div>
-            </div>
-        </section>
-
-        <footer id="footer" class="footer-wrapper light scrollspy-footer">
-            <div class="footer-top">
-                <div class="container">
-                    <div class="row shrink-auto-md align-items-lg-center
-                            gap-10">
-                        <div class="col-12 col-shrink order-last-md">
-                            <div class="col-inner">
-                                <div class="footer-dropdowns">
-                                    <div class="row shrink-auto gap-30
-                                            align-items-center">
-                                        <div class="col-auto">
-                                            <div class="col-inner">
-                                            </div>
-                                        </div>
-                                        <div class="col-shrink">
-                                            <div class="col-inner">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-auto">
-                        </div>
-                    </div>
-                    <hr class="opacity-7" />
-                </div>
-            </div>
-            <div class="main-footer">
-                <div class="container">
-                    <div class="row gap-50">
-                        <div class="col-12 col-lg-5">
-                            {{ page.footer_first }}
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="bottom-footer">
-                <div class="container">
-                    <div class="row shrink-auto-md gap-10 gap-40-lg">
-                        <div class="col-auto">
-                            <div class="col-inner">
-                                {{ page.footer_second }}
-                            </div>
-                        </div>
-                        <div class="col-shrink">
-                            <div class="col-inner">
-                                <p class="footer-copy-right"> &#169; 2019
-                                    <span class="text-secondary"><a
-                                                href="https://www.aviareps.com/"
-                                                title="AVIAREPS Official
-                                                Website"
-                                                target="_blank">AVIAREPS AG</a></span> All Rights Reserved.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-
+      </div>
     </div>
-</div>
+    <section class="pb-0">
+      <div class="container">
+        <div id="after-payment" class="clear mb-100"></div>
 
-{{page.bottom}}
+
+          {{ page.content }}
+
+        </div>
+
+    </section>
+
+    <footer id="footer" class="mt-40 footer-wrapper light scrollspy-footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row shrink-auto-md align-items-lg-center
+                            gap-10">
+            <div class="col-12 col-shrink order-last-md">
+              <div class="col-inner">
+                <div class="footer-dropdowns">
+                  <div class="row shrink-auto gap-30
+                                            align-items-center">
+                    <div class="col-auto">
+                      <div class="col-inner">
+                      </div>
+                    </div>
+                    <div class="col-shrink">
+                      <div class="col-inner">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-auto">
+            </div>
+          </div>
+          <hr class="opacity-7"/>
+        </div>
+      </div>
+      <div class="main-footer">
+        <div class="container">
+          <div class="row gap-50">
+
+
+              {{ page.footer_first }}
+
+          </div>
+        </div>
+      </div>
+      <div class="bottom-footer">
+        <div class="container">
+          <div class="row shrink-auto-md gap-10 gap-40-lg">
+            <div class="col-auto">
+              <div class="col-inner">
+                {{ page.footer_second }}
+              </div>
+            </div>
+            <div class="col-shrink">
+              <div class="col-inner">
+                <p class="footer-copy-right"> &#169; 2019
+                  <span class="text-secondary"><a
+                      href="https://www.aviareps.com/"
+                      title="AVIAREPS Official
+                                                Website"
+                      target="_blank">AVIAREPS AG</a></span> All Rights Reserved.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+</div>

@@ -1,8 +1,8 @@
 /*------------------------------------------------------------------
 * Project:        Tourperator
-* Author:         Crenoveative 
-* URL:            http://crenoveative.com or https://themeforest.net/user/crenoveative/portfolio 
-* Created:        10/09/2019 
+* Author:         Crenoveative
+* URL:            http://crenoveative.com or https://themeforest.net/user/crenoveative/portfolio
+* Created:        10/09/2019
 -------------------------------------------------------------------*/
 
 /*------------------------------------------------------------------
@@ -318,7 +318,7 @@ section,
 /* Menu Arrow */
 
 .header-main .navbar-arrow .arrow-indicator {
-    color: #AAA;
+    color: #000000;
 }
 
 .header-main .navbar-arrow ul li .arrow-indicator {
@@ -347,15 +347,15 @@ section,
 }
 
 .header-main .navbar-arrow > ul > li:hover .arrow-indicator {
-    color: #FF1944;
+    color: #0F82D4;
 }
 
 .header-main .navbar-arrow > ul > li:hover li .arrow-indicator {
-    color: #AAA;
+    color: #000000;
 }
 
 .header-main .navbar-arrow > ul > li li:hover .arrow-indicator {
-    color: #FFF;
+    color: #000000;
 }
 
 
@@ -3636,7 +3636,7 @@ ul.category-list li a span {
 }
 
 .testimonial-grid-01:before {
-    font-family: 'ElegantIcons';
+    font-family: 'Mark Offc Pro';
     content: "\7b";
     display: block;
     -ms-transform: rotate(180deg);

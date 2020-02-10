@@ -1,42 +1,42 @@
 /*------------------------------------------------------------------
 * Project:        Tourperator
-* Author:         Crenoveative 
-* URL:            http://crenoveative.com or https://themeforest.net/user/crenoveative/portfolio 
-* Created:        10/09/2019 
+* Author:         Crenoveative
+* URL:            http://crenoveative.com or https://themeforest.net/user/crenoveative/portfolio
+* Created:        10/09/2019
 -------------------------------------------------------------------*/
 
 
-/** 
- * Add your style here 
+/**
+ * Add your style here
  */
+/*noinspection ALL*/
 .bg-light,
 .footer-wrapper.light {
-    background: rgb(0, 15, 64, 0.3) !important;
+  background: rgb(0, 15, 64, 0.3) !important;
 }
 
 /*regular <a> link style*/
 
 
-
 a {
-    text-decoration: none;
-    o-transition: all 0.3s ease-out;
-    -ms-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    -webkit-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
-    color: rgb(0, 15, 64);
+  text-decoration: none;
+  o-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  color: rgb(0, 15, 64);
 }
 
 a:hover,
 a:focus {
-    text-decoration: none;
-    o-transition: all 0.3s ease-out;
-    -ms-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    -webkit-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
-    color: rgb(35, 168, 186);
+  text-decoration: none;
+  o-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  color: rgb(35, 168, 186);
 }
 
 /*hover header links style*/
@@ -44,49 +44,65 @@ a:focus {
 .footer-wrapper a:hover,
 .footer-wrapper ul.footer-menu-list li a:hover,
 .destination-grid-item-01:hover h5 {
-    color: rgb(35, 168, 186)
+  color: rgb(35, 168, 186)
 }
-
-
-
 
 
 /*text-marking*/
 ::selection {
-    color: #fff;
-    background: #000f40;
+  color: #fff;
+  background: #000f40;
 }
 
 ::-moz-selection {
-    color: #fff;
-    background: #000f40;
+  color: #fff;
+  background: #000f40;
 }
 
 .header-main .navbar-arrow > ul > li:hover .arrow-indicator {
-    color: rgb(35, 168, 186);
+  color: rgb(35, 168, 186);
 }
 
 
-/*language popup start*/
+/*language dropdown form*/
 
-#alertBox {
+.lang-dropdown-form {
 
-    display: none;
-    z-index: 1000;
-    width: 300px;
-    height: auto;
-    background-color: white;
-    position: absolute;
-    top: 40%;
-    left: 70%;
-    border-radius: 10px;
-    border: 2px solid white;
-    box-shadow: grey 10px 5px 5px;
+  margin-top: 20px;
+  max-width: 100%;
+  /*-webkit-box-shadow: 0px 0px 17px -5px rgba(0, 0, 0, 0.23);
+  -moz-box-shadow: 0px 0px 17px -5px rgba(0, 0, 0, 0.23);
+  box-shadow: 0px 0px 17px -5px rgba(0, 0, 0, 0.23);
+*/
 }
 
-#alertNote {
-    font-size: 1.1em;
-    text-align: center;
-    padding: 30px;
+.lang-dropdown-select-element {
+
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 14px;
+  max-width: 130px;
+  border: none;
+  background-color: transparent;
+  z-index: -30;
+}
+
+.lang-dropdown-select-element option {
+  padding: 3px 0px 10px 0px;
+  border: none;
 
 }
+@media only screen and (max-width: 991px){
+
+  .lang-dropdown-select-element {
+
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .lang-dropdown-select-element option{
+    padding: 3px 0px 10px 0px;
+    border: none;
+    color: #636363;
+
+
+
+  }

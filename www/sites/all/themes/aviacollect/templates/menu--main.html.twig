@@ -36,7 +36,6 @@
 		{% if menu_level == 0 %}
 			<nav class="main-nav-menu main-menu-nav navbar-arrow">
 				<ul class="main-nav">
-
 				{% else %}
 					<ul>
 					{% endif %}
@@ -49,10 +48,13 @@
 						</li>
 					{% endfor %}
 					{% if menu_level == 0 %}
+            <li>{{ drupal_entity('block', 'languagedropdownswitcher', check_access=false) }}</li>
 					</ul>
-				</nav>
+
 		{% else %}
 			</ul>
 		{% endif %}
 	{% endif %}
+
 {% endmacro %}
+      </nav>

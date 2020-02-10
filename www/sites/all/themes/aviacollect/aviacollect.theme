@@ -10,3 +10,7 @@ function aviacollect_theme_suggestions_page_alter(array &$suggestions, array $va
     $suggestions[] = 'page__'.$content_type;
   }
 }
+
+function aviacollect_form_lang_dropdown_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  $form["lang_dropdown_select"]["#title"] = "";
+}

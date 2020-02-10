@@ -84,4 +84,4 @@ maintenance_page:
       css/maintenance-page.css: {}
   dependencies:
     - system/maintenance
-    - aviacollect/global-styling
+    - swayfluence/global-styling
