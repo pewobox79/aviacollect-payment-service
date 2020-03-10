@@ -1,0 +1,7 @@
+name: AVIAREPS Helper
+type: module
+description: 'Provides some helper functions.'
+package: AVIAREPS
+core: 8.x
+dependencies:
+  - drupal:system (>=8.5)

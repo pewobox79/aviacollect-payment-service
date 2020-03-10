@@ -1,0 +1,24 @@
+<?php
+
+use \Drupal\views\ViewExecutable;
+use \Drupal\node\NodeInterface;
+use \Drupal\node\Entity\Node;
+
+/**
+ * @param ViewExecutable $view
+ * @param $display_id
+ * @param array $args
+ */
+function aviareps_helper_views_pre_view(ViewExecutable $view, $display_id, array &$args) {
+  $viewId = $view ->id();
+  if ($viewId == 'duplicate_of_ancillary_local' && $display_id == 'block_1') {
+    $node = \Drupal::routeMatch()->getParameter('node');
+
+    if ($node instanceof NodeInterface) {
+      $nid = $node->id();
+      $node = Node::load($nid);
+      $region = $node->field_region_filter->getValue();
+      $args[0] = (empty($region)) ? '' : $region[0]['value'];
+    }
+  }
+}
